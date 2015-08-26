@@ -55,6 +55,7 @@ COPY conf/ubuntu        /opt/docker/conf/
 
 EXPOSE 9000
 
+RUN mkdir -p /docker/code/
 VOLUME /docker/
 WORKDIR /docker/code/
 
