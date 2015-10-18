@@ -53,6 +53,7 @@ Thanks for support, ideas and issues ...
 - [Benjamin Rau](https://twitter.com/benjamin_rau)
 - [Philipp Kitzberger](https://github.com/Kitzberger)
 - [Stephan Ferraro](https://github.com/ferraro)
+- [Cedric Ziel](https://github.com/cedricziel)
 
 Thanks to [cron IT GmbH](http://www.cron.eu/) for inspiration.
 
