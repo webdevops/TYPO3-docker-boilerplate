@@ -29,6 +29,7 @@ DOCKER:
   MYSQL_USER:          "{{ lookup('env','MYSQL_USER') }}"
   MYSQL_PASSWORD:      "{{ lookup('env','MYSQL_PASSWORD') }}"
   MYSQL_DATABASE:      "{{ lookup('env','MYSQL_DATABASE') }}"
+  MYSQL_HOST:          "{{ lookup('env','MYSQL_HOST') }}"
 
   # PostgreSQL
   POSTGRES_USER:     "{{ lookup('env','POSTGRES_USER') }}"
