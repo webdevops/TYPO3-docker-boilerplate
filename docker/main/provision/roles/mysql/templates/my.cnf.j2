@@ -4,7 +4,7 @@ user="root"
 password="{{ DOCKER.MYSQL_ROOT_PASSWORD }}"
 
 [mysql]
-host=mysql
+host="{{ DOCKER.MYSQL_HOST }}"
 user="root"
 password="{{ DOCKER.MYSQL_ROOT_PASSWORD }}"
 database="{{ DOCKER.MYSQL_DATABASE }}"
@@ -16,6 +16,6 @@ sigint-ignore
 reconnect
 
 [mysqldump]
-host=mysql
+host="{{ DOCKER.MYSQL_HOST }}"
 user="root"
 password="{{ DOCKER.MYSQL_ROOT_PASSWORD }}"

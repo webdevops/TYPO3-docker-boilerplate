@@ -62,6 +62,7 @@ MYSQL_ROOT_PASSWORD=dev
 MYSQL_USER=dev
 MYSQL_PASSWORD=dev
 MYSQL_DATABASE=typo3
+MYSQL_HOST=mysql
 
 #######################################
 # PostgreSQL settings
