@@ -66,18 +66,20 @@ build:
 clean:
 	test -d app/typo3temp && { rm -rf app/typo3temp/*; }
 
-bash:
-	docker exec -ti "`docker-compose ps -q app`" 'bash'
+bash: shell
+
+shell:
+	docker exec -it -u application $$(docker-compose ps -q app) /bin/bash
 
 root:
-	docker exec -ti "`docker-compose ps -q app`" 'root'
+	docker exec -it -u root $$(docker-compose ps -q app) /bin/bash
 
 #############################
 # TYPO3
 #############################
 
 scheduler:
-	docker-compose run --rm app typo3/cli_dispatch.phpsh scheduler $(ARGS)
+	docker exec -it $$(docker-compose ps -q app) typo3/cli_dispatch.phpsh scheduler $(ARGS)
 
 #############################
 # Argument fix workaround
