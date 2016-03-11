@@ -38,10 +38,10 @@ rebuild:
 #############################
 
 mysql-backup:
-	docker-compose run --rm --no-deps app root bash /docker/bin/backup.sh mysql
+	docker exec -it $$(docker-compose ps -q app) bash /docker/bin/backup.sh mysql
 
 mysql-restore:
-	docker-compose run --rm --no-deps app root bash /docker/bin/restore.sh mysql
+	docker exec -it $$(docker-compose ps -q app) bash /docker/bin/restore.sh mysql
 
 #############################
 # Solr
@@ -49,12 +49,12 @@ mysql-restore:
 
 solr-backup:
 	docker-compose stop solr
-	docker-compose run --rm --no-deps app root bash /docker/bin/backup.sh solr
+	docker exec -it $$(docker-compose ps -q app) bash /docker/bin/backup.sh solr
 	docker-compose start solr
 
 solr-restore:
 	docker-compose stop solr
-	docker-compose run --rm --no-deps app root bash /docker/bin/restore.sh solr
+	docker exec -it $$(docker-compose ps -q app) bash /docker/bin/restore.sh solr
 	docker-compose start solr
 
 #############################
@@ -71,17 +71,17 @@ clean:
 	test -d app/typo3temp && { rm -rf app/typo3temp/*; }
 
 bash:
-	docker-compose run --rm app bash
+	docker exec -it $$(docker-compose ps -q app) bash
 
 root:
-	docker-compose run --rm app root
+	docker exec -it $$(docker-compose ps -q app) bash
 
 #############################
 # TYPO3
 #############################
 
 scheduler:
-	docker-compose run --rm app typo3/cli_dispatch.phpsh scheduler $(ARGS)
+	docker exec -it $$(docker-compose ps -q app) typo3/cli_dispatch.phpsh scheduler $(ARGS)
 
 #############################
 # Argument fix workaround
