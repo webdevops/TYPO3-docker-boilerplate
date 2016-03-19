@@ -12,10 +12,9 @@ if [ "$#" -lt 1 ]; then
     exit 1
 fi
 
-mkdir -p -- "$CODE_DIR/"
-chmod 777 "$CODE_DIR/"
 
-rm -f -- "$CODE_DIR/.gitkeep"
+rm -rf -- "$CODE_DIR"
+mkdir -p "$CODE_DIR"
 
 case "$1" in
     ###################################
