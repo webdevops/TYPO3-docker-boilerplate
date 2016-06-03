@@ -24,6 +24,7 @@ app:
   env_file:
     - etc/environment.yml
     - etc/environment.production.yml
+  restart: always
 
 #######################################
 # MySQL server
@@ -44,6 +45,7 @@ mysql:
   env_file:
     - etc/environment.yml
     - etc/environment.production.yml
+  restart: always
 
 #######################################
 # PostgreSQL server
@@ -140,3 +142,4 @@ storage:
   build: docker/storage/
   volumes:
     - /storage
+  restart: always
