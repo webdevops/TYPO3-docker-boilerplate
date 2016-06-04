@@ -61,6 +61,7 @@ mysql:
 #  env_file:
 #    - etc/environment.yml
 #    - etc/environment.production.yml
+#  restart: always
 
 #######################################
 # Solr server
@@ -74,6 +75,7 @@ mysql:
 #  env_file:
 #    - etc/environment.yml
 #    - etc/environment.production.yml
+#  restart: always
 
 #######################################
 # Elasticsearch
@@ -85,6 +87,7 @@ mysql:
 #  env_file:
 #    - etc/environment.yml
 #    - etc/environment.production.yml
+#  restart: always
 
 #######################################
 # Redis
@@ -96,6 +99,7 @@ mysql:
 #  env_file:
 #    - etc/environment.yml
 #    - etc/environment.production.yml
+#  restart: always
 
 #######################################
 # Memcached
@@ -107,6 +111,7 @@ mysql:
 #  env_file:
 #    - etc/environment.yml
 #    - etc/environment.production.yml
+#  restart: always
 
 #######################################
 # Mailcatcher
@@ -116,6 +121,7 @@ mysql:
 #  env_file:
 #    - etc/environment.yml
 #    - etc/environment.production.yml
+#  restart: always
 
 #######################################
 # FTP (vsftpd)
@@ -128,6 +134,7 @@ mysql:
 #  env_file:
 #    - etc/environment.yml
 #    - etc/environment.production.yml
+#  restart: always
 
 #######################################
 # Storage
