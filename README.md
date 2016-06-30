@@ -2,8 +2,6 @@
 
 [![latest v5.1.3](https://img.shields.io/badge/latest-v5.1.3-green.svg?style=flat)](https://github.com/webdevops/TYPO3-docker-boilerplate/releases/tag/5.1.3)
 ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/webdevops/typo3-docker-boilerplate.svg)](http://isitmaintained.com/project/webdevops/typo3-docker-boilerplate "Average time to resolve an issue")
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/webdevops/typo3-docker-boilerplate.svg)](http://isitmaintained.com/project/webdevops/typo3-docker-boilerplate "Percentage of issues still open")
 
 This is an easy customizable TYPO3 docker boilerplate.
 
