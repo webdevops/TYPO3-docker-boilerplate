@@ -24,6 +24,7 @@ services:
       #- redis
       #- memcached
       #- ftp
+    restart: always
     ports:
       - "8000:80"
       - "8443:443"
@@ -48,6 +49,7 @@ services:
       #dockerfile: Percona-5.5.Dockerfile
       #dockerfile: Percona-5.6.Dockerfile
       #dockerfile: Percona-5.7.Dockerfile
+    restart: always
     volumes_from:
       - storage
     env_file:
@@ -62,6 +64,7 @@ services:
   #    context: docker/postgres/
   #    dockerfile: Postgres-9.4.Dockerfile
   #    dockerfile: Postgres-9.5.Dockerfile
+  #  restart: always
   #  volumes_from:
   #    - storage
   #  env_file:
@@ -74,6 +77,7 @@ services:
   #solr:
   #  build:
   #    context: docker/solr/
+  #  restart: always
   #  volumes_from:
   #    - storage
   #  environment:
@@ -88,6 +92,7 @@ services:
   #elasticsearch:
   #  build:
   #    context: docker/elasticsearch/
+  #  restart: always
   #  volumes_from:
   #    - storage
   #  env_file:
@@ -100,6 +105,7 @@ services:
   #redis:
   #  build:
   #    context: docker/redis/
+  #  restart: always
   #  volumes_from:
   #    - storage
   #  env_file:
@@ -112,6 +118,7 @@ services:
   #memcached:
   #  build:
   #    context: docker/memcached/
+  #  restart: always
   #  volumes_from:
   #    - storage
   #  env_file:
@@ -124,6 +131,7 @@ services:
   #ftp:
   #  build:
   #    context: docker/vsftpd/
+  #  restart: always
   #  volumes_from:
   #    - sourcecode
   #    - storage
@@ -137,5 +145,6 @@ services:
   storage:
     build:
       context: docker/storage/
+    restart: always
     volumes:
       - /storage
