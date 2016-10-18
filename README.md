@@ -1,6 +1,6 @@
 ![TYPO3 Docker Boilerplate](https://static.webdevops.io/typo3-docker-boilerplate.svg)
 
-[![latest v5.1.3](https://img.shields.io/badge/latest-v5.1.3-green.svg?style=flat)](https://github.com/webdevops/TYPO3-docker-boilerplate/releases/tag/5.1.3)
+[![latest v5.2.0-beta1](https://img.shields.io/badge/latest-v5.2.0-beta1-green.svg?style=flat)](https://github.com/webdevops/TYPO3-docker-boilerplate/releases/tag/5.2.0-beta1)
 ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)
 
 This is an easy customizable TYPO3 docker boilerplate.
