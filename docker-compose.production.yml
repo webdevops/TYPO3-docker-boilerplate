@@ -46,8 +46,6 @@ services:
     restart: always
     volumes_from:
       - storage
-    volumes:
-      - /tmp/debug/:/tmp/debug/
     env_file:
       - etc/environment.yml
       - etc/environment.production.yml
