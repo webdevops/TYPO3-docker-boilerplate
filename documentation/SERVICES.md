@@ -25,7 +25,7 @@ External Port | 13306
 Access fo MySQL user "root" and "dev" will be allowed from external hosts (eg. for debugging, dumps and other stuff).
 
 
-### PostgreSQL
+### PostgreSQL (disabled by default)
 
 Setting       | Value
 ------------- | -------------
@@ -35,7 +35,7 @@ Host          | postgres:5432
 External Port | 15432
 
 
-### Solr
+### Solr (disabled by default)
 
 Setting       | Value
 ------------- | -------------
@@ -50,21 +50,29 @@ Setting       | Value
 Host          | elasticsearch:9200 and :9300
 External Port | 19200 and 19300
 
-### Redis
+### Redis (disabled by default)
 
 Setting       | Value
 ------------- | -------------
 Host          | redis
 Port          | 6379
 
-### Memcached
+### Memcached (disabled by default)
 
 Setting       | Value
 ------------- | -------------
 Host          | memcached
 Port          | 11211
 
-### Mailcatcher
+#### Mailhog
+
+Setting       | Value
+------------- | -------------
+Host          | mail
+SMTP port     | 1025
+Web port      | 8025
+
+#### Mailcatcher (disabled by default)
 
 Setting       | Value
 ------------- | -------------
@@ -72,7 +80,15 @@ Host          | mail
 SMTP port     | 1025
 Web port      | 1080
 
-### FTP
+#### Mailsandbox (disabled by default)
+
+Setting       | Value
+------------- | -------------
+Host          | mail
+SMTP port     | 1025
+Web port      | 80
+
+### FTP (disabled by default)
 
 Setting       | Value
 ------------- | -------------
@@ -82,7 +98,7 @@ User          | dev (if not changed in env)
 Password      | dev (if not changed in env)
 Path          | /storage/ftp (if not changed in env)
 
-### PhpMyAdmin
+### PhpMyAdmin (disabled by default)
 
 Setting       | Value
 ------------- | -------------
