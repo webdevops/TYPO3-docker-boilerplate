@@ -8,6 +8,16 @@ You find the official version matrix "TYPO3 - Solr TYPO3 Extension - Solr Server
 
 
 
+## EXT:solr 5.1 + TYPO3 7.6 + Solr Server 4.10.4
+
+Make sure to use context `docker/solr/ext-solr-5.1/` in your `docker-compose.yml` like
+
+    solr:
+      build:
+        context: docker/solr/ext-solr-5.1/
+
+
+
 ## EXT:solr 5.0 + TYPO3 7.6 + Solr Server 4.10.4
 
 Make sure to use context `docker/solr/ext-solr-4.0-5.0/` in your `docker-compose.yml` like
