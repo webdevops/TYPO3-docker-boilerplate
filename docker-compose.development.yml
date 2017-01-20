@@ -82,6 +82,8 @@ services:
   #solr:
   #  build:
   #    context: docker/solr/
+  #  ports:
+  #    - 18983:8983
   #  volumes_from:
   #    - storage
   #  env_file:
