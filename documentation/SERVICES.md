@@ -43,6 +43,8 @@ Host          | solr:8983
 External Port | 18983
 Cores         | docker/solr/conf/solr.xml (data dirs are created automatically)
 
+[More details about out-of-the-box supported TYPO3 solr versions](../docker/solr/TYPO3-SOLR-VERSION-MATRIX.md)
+
 ### Elasticsearch (disabled by default)
 
 Setting       | Value
