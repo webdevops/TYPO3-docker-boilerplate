@@ -76,7 +76,8 @@ services:
   #######################################
   #solr:
   #  build:
-  #    context: docker/solr/ext-solr-3.0/
+  #    #context: docker/solr/ext-solr-3.0/
+  #    context: docker/solr/ext-solr-3.1/
   #  restart: always
   #  volumes_from:
   #    - storage

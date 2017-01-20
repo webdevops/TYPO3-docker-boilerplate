@@ -17,7 +17,7 @@ ADD entrypoint.sh /entrypoint.sh
 COPY ./conf/ /opt/solr-conf/
 
 # Download plugin
-RUN curl -sf -o /tmp/solr-typo3-plugin.jar -L http://www.typo3-solr.com/fileadmin/files/solr/solr-typo3-plugin-1.3.0.jar
+RUN curl -sf -o /tmp/solr-typo3-plugin.jar -L https://github.com/TYPO3-Solr/solr-typo3-plugin/releases/download/release-1_3_0/solr-typo3-plugin-1.3.0.jar
 
 # Init directories
 RUN cp -a /opt/solr-conf/* /opt/solr/example/solr/ \
