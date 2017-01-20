@@ -84,11 +84,13 @@ services:
   #    #context: docker/solr/ext-solr-3.0/
   #    #context: docker/solr/ext-solr-3.1/
   #    #context: docker/solr/ext-solr-4.0-5.0/
-  #    context: docker/solr/ext-solr-5.1/
+  #    #context: docker/solr/ext-solr-5.1/
+  #    context: docker/solr/ext-solr-6.0/
   #  ports:
   #    - 18983:8983
-  #  volumes_from:
-  #    - storage
+  #   # @TODO temporary disabled:
+  #   #volumes_from:
+  #   #  - storage
   #  env_file:
   #    - etc/environment.yml
   #    - etc/environment.development.yml
