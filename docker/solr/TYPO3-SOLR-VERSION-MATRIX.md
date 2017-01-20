@@ -7,51 +7,25 @@ You find the official version matrix "TYPO3 - Solr TYPO3 Extension - Solr Server
 ## Out-of-the-box supported solr configurations:
 
 
+EXT:solr version | TYPO3 version | Build context
+-----------------|---------------|---------------------------------
+5.1              | 8.0           | `docker/solr/ext-solr-5.1/`
+5.1              | 7.6           | `docker/solr/ext-solr-5.1/`
+5.0              | 8.0           | `docker/solr/ext-solr-4.0-5.0/`
+5.0              | 7.6 (LTS)     | `docker/solr/ext-solr-4.0-5.0/`
+4.0              | 8.0           | `docker/solr/ext-solr-4.0-5.0/`
+4.0              | 7.6 (LTS)     | `docker/solr/ext-solr-4.0-5.0/`
+3.1              | 7.6 (LTS)     | `docker/solr/ext-solr-3.1/`
+3.1              | 6.2 (LTS)     | `docker/solr/ext-solr-3.1/`
+3.0              | 6.2 (LTS)     | `docker/solr/ext-solr-3.0/`
+3.0              | 4.5 (LTS)     | `docker/solr/ext-solr-3.0/`
 
-### EXT:solr 5.1 + TYPO3 7.6 + Solr Server 4.10.4
 
-Use build context `docker/solr/ext-solr-5.1/` in your `docker-compose.yml` like
+
+### How to set build context
+
+Simply use the appropriate value from the table above as build context in your `docker-compose.yml` like
 
     solr:
       build:
         context: docker/solr/ext-solr-5.1/
-
-
-
-### EXT:solr 5.0 + TYPO3 7.6 + Solr Server 4.10.4
-
-Use build context `docker/solr/ext-solr-4.0-5.0/` in your `docker-compose.yml` like
-
-    solr:
-      build:
-        context: docker/solr/ext-solr-4.0-5.0/
-
-
-
-### EXT:solr 4.0 + TYPO3 7.6 + Solr Server 4.10.4
-
-Use build context `docker/solr/ext-solr-4.0-5.0/` in your `docker-compose.yml` like
-
-    solr:
-      build:
-        context: docker/solr/ext-solr-4.0-5.0/
-
-
-
-### EXT:solr 3.1 + TYPO3 6.2-7.6 + Solr Server 4.10.4
-
-Use build context `docker/solr/ext-solr-3.1/` in your `docker-compose.yml` like
-
-    solr:
-      build:
-        context: docker/solr/ext-solr-3.1/
-
-
-
-### EXT:solr 3.0.2 + TYPO3 4.5-6.2 + Solr Server 4.9.0
-
-Use build context `docker/solr/ext-solr-3.0/` in your `docker-compose.yml` like
-
-    solr:
-      build:
-        context: docker/solr/ext-solr-3.0/
