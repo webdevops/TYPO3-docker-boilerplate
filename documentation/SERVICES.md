@@ -64,6 +64,8 @@ Setting       | Value
 Host          | memcached
 Port          | 11211
 
+### Mail Sandbox Tools
+
 #### Mailhog
 
 Setting       | Value
