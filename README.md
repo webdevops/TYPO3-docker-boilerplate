@@ -10,14 +10,14 @@ Supports:
 - Nginx or Apache HTTPd
 - PHP-FPM (with Xdebug)
 - MySQL, MariaDB or PerconaDB
-- PostgreSQL
-- Solr (disabled, without configuration)
+- PostgreSQL (disabled)
+- Solr (disabled, with basic configuration)
 - Elasticsearch (disabled, without configuration)
 - Redis (disabled)
 - Memcached (disabled)
-- Mailcatcher (if no mail sandbox is used, eg. [Vagrant Development VM](https://github.com/webdevops/vagrant-development))
-- FTP server (vsftpd)
-- PhpMyAdmin
+- MailHog, Mailcatcher (if no mail sandbox is used, eg. [Vagrant Development VM](https://github.com/webdevops/vagrant-development))
+- FTP server vsftpd (disabled)
+- PhpMyAdmin (disabled)
 - Support for `TYPO3_CONTEXT` and `FLOW_CONTEXT` for TYPO3, FLOW, NEOS.
 - maybe more later...
 

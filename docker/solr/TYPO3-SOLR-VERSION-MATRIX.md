@@ -7,7 +7,7 @@ You find the official version matrix "TYPO3 - Solr TYPO3 Extension - Solr Server
 ## Out-of-the-box supported solr configurations:
 
 
-EXT:solr version | TYPO3 version | Build context
+EXT:solr version | TYPO3 version | Solr Container Build context
 -----------------|---------------|---------------------------------
 5.1              | 8.0           | `docker/solr/ext-solr-5.1/`
 5.1              | 7.6           | `docker/solr/ext-solr-5.1/`
