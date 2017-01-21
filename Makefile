@@ -69,10 +69,10 @@ clean:
 bash: shell
 
 shell:
-	docker exec -it -u application $$(docker-compose ps -q app) /bin/bash
+	docker-compose exec --user application app /bin/bash
 
 root:
-	docker exec -it -u root $$(docker-compose ps -q app) /bin/bash
+	docker-compose exec --user root app /bin/bash
 
 #############################
 # TYPO3
