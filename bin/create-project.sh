@@ -21,7 +21,7 @@ case "$1" in
     ## TYPO3 CMS
     ###################################
     "typo3")
-        execInDir "$CODE_DIR" "docker run --rm -v $(pwd):/app composer/composer:alpine create-project typo3/cms-base-distribution \"$CODE_DIR\""
+        execInDir "$CODE_DIR" "docker run --rm -v $(pwd):/app composer/composer:alpine create-project typo3/cms-base-distribution \"/app/$(basename $CODE_DIR)\""
         execInDir "$CODE_DIR" "touch web/FIRST_INSTALL"
         ;;
 
@@ -29,7 +29,7 @@ case "$1" in
     ## TYPO3 NEOS
     ###################################
     "neos")
-        execInDir "$CODE_DIR" "docker run --rm -v $(pwd):/app composer/composer:alpine create-project typo3/neos-base-distribution \"$CODE_DIR\""
+        execInDir "$CODE_DIR" "docker run --rm -v $(pwd):/app composer/composer:alpine create-project typo3/neos-base-distribution \"/app/$(basename $CODE_DIR)\""
         ;;
 
     ###################################
