@@ -4,23 +4,25 @@
 
 ## Create NEOS project
 
-For the first NEOS setup (make sure [composer](https://getcomposer.org/) is installed):
+For the first NEOS setup:
 
 ```bash
 make create neos
 ```
 
-or
+or (make sure [composer](https://getcomposer.org/) is installed)
 
 ```bash
 rm -f app/.gitkeep
-composer create-project typo3/neos-base-distribution app/
+composer create-project neos/neos-base-distribution app/
 touch app/.gitkeep
 ```
 
-And change `DOCUMENT_ROOT` in `docker-env.yml`:
+And change `WEB_DOCUMENT_ROOT` in `/etc/environment.yml`:
 
-    DOCUMENT_ROOT=/app/Web/
+    WEB_DOCUMENT_ROOT=/app/Web/
+    
+Open <http://localhost:8000/setup> and follow installation wizard.
 
 Feel free to modify your NEOS installation in your `app/` (a shared folder of Docker),
 most of the time there is no need to enter any Docker container.
@@ -38,6 +40,3 @@ docker-compose run --rm app ./flow core:anyothercommand
 
 docker-compose run --rm app bash
 ```
-
-
-Webserver is available at Port 8000
