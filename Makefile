@@ -79,7 +79,8 @@ root:
 #############################
 
 scheduler:
-	docker exec -it $$(docker-compose ps -q app) typo3/cli_dispatch.phpsh scheduler $(ARGS)
+	# TODO: remove the workaround "; (exit $?)" when https://github.com/docker/compose/issues/3379 has been fixed
+	docker-compose exec --user application app /bin/bash -c '"$$WEB_DOCUMENT_ROOT"typo3/cli_dispatch.phpsh scheduler $(ARGS); (exit $$?)'
 
 #############################
 # Argument fix workaround
