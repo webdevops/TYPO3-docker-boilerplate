@@ -58,11 +58,11 @@ dockerContainerId() {
 }
 
 dockerExec() {
-    docker exec -i "$(docker-compose ps -q app)" "$@"
+    docker-compose exec app "$@"
 }
 
 dockerExecMySQL() {
-    docker exec -i "$(docker-compose ps -q mysql)" "$@"
+    docker-compose exec mysql "$@"
 }
 
 dockerCopyFrom() {
