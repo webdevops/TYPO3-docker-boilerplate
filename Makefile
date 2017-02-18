@@ -78,6 +78,9 @@ root:
 # TYPO3
 #############################
 
+cli:
+	docker-compose run --rm --user application app cli $(ARGS)
+
 scheduler:
 	docker exec -it $$(docker-compose ps -q app) typo3/cli_dispatch.phpsh scheduler $(ARGS)
 
