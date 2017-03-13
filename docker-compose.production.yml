@@ -71,18 +71,13 @@ services:
   # Solr server
   #######################################
   #solr:
-  #  build:
-  #    #context: docker/solr/ext-solr-3.0/
-  #    #context: docker/solr/ext-solr-3.1/
-  #    #context: docker/solr/ext-solr-4.0-5.0/
-  #    context: docker/solr/ext-solr-5.1/
+  #  image: webdevops/typo3-solr:6.0
+  #  image: webdevops/typo3-solr:5.0
+  #  image: webdevops/typo3-solr:4.0
+  #  image: webdevops/typo3-solr:3.1
   #  ports:
   #    - 18983:8983
   #  restart: always
-  #  volumes_from:
-  #    - storage
-  #  environment:
-  #    - SOLR_STORAGE=/storage/solr/server-master/
   #  env_file:
   #    - etc/environment.yml
   #    - etc/environment.production.yml
