@@ -12,9 +12,11 @@ if [ "$#" -lt 1 ]; then
     exit 1
 fi
 
+#if app dir exists then backup it with timestamp
+[ ! -d "$CODE_DIR" ] || mv "$CODE_DIR" "$CODE_DIR".$(date +%Y%m%d%H%M%S);
 
-rm -rf -- "$CODE_DIR"
-mkdir -p "$CODE_DIR"
+mkdir -p -- "$CODE_DIR/"
+chmod 777 "$CODE_DIR/"
 
 case "$1" in
     ###################################
