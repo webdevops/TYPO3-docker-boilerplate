@@ -9,6 +9,6 @@
 #
 #++++++++++++++++++++++++++++++++++++++
 
-FROM mariadb:10
+FROM mariadb:10.1
 
 ADD conf/mysql-docker.cnf /etc/mysql/conf.d/z99-docker.cnf
