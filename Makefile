@@ -31,7 +31,7 @@ rebuild:
 	docker-compose stop
 	docker-compose pull
 	docker-compose rm --force app
-	docker-compose build --no-cache
+	docker-compose build --no-cache --pull
 	docker-compose up -d --force-recreate
 
 #############################
@@ -79,8 +79,12 @@ root:
 # TYPO3
 #############################
 
+cli:
+	docker-compose run --rm --user application app cli $(ARGS)
+
 scheduler:
-	docker exec -it $$(docker-compose ps -q app) typo3/cli_dispatch.phpsh scheduler $(ARGS)
+	# TODO: remove the workaround "; (exit $?)" when https://github.com/docker/compose/issues/3379 has been fixed
+	docker-compose exec --user application app /bin/bash -c '"$$WEB_DOCUMENT_ROOT"typo3/cli_dispatch.phpsh scheduler $(ARGS); (exit $$?)'
 
 #############################
 # Argument fix workaround
