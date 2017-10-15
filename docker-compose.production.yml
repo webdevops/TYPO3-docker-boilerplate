@@ -23,8 +23,6 @@ services:
     restart: always
     volumes:
       - ./app/:/app/
-    volumes_from:
-      - storage
     env_file:
       - etc/environment.yml
       - etc/environment.production.yml
@@ -44,8 +42,8 @@ services:
       #dockerfile: Percona-5.6.Dockerfile
       #dockerfile: Percona-5.7.Dockerfile
     restart: always
-    volumes_from:
-      - storage
+    volumes:
+      - mysql:/var/lib/mysql
     env_file:
       - etc/environment.yml
       - etc/environment.production.yml
@@ -61,8 +59,8 @@ services:
   #  ports:
   #    - 15432:5432
   #  restart: always
-  #  volumes_from:
-  #    - storage
+  #  volumes:
+  #    - solr:/opt/solr/server/solr/data
   #  env_file:
   #    - etc/environment.yml
   #    - etc/environment.production.yml
@@ -78,6 +76,10 @@ services:
   #  ports:
   #    - 18983:8983
   #  restart: always
+  #  volumes:
+  #    - solr:/opt/solr/server/solr/data
+  #  environment:
+  #    - SOLR_STORAGE=/opt/solr/server/solr/data
   #  env_file:
   #    - etc/environment.yml
   #    - etc/environment.production.yml
@@ -92,8 +94,8 @@ services:
   #    - 19200:9200
   #    - 19300:9300
   #  restart: always
-  #  volumes_from:
-  #    - storage
+  #  volumes:
+  #    - elasticsearch:/usr/share/elasticsearch/data
   #  env_file:
   #    - etc/environment.yml
   #    - etc/environment.production.yml
@@ -105,8 +107,8 @@ services:
   #  build:
   #    context: docker/redis/
   #  restart: always
-  #  volumes_from:
-  #    - storage
+  #  volumes:
+  #    - redis:/data
   #  env_file:
   #    - etc/environment.yml
   #    - etc/environment.production.yml
@@ -118,8 +120,6 @@ services:
   #  build:
   #    context: docker/memcached/
   #  restart: always
-  #  volumes_from:
-  #    - storage
   #  env_file:
   #    - etc/environment.yml
   #    - etc/environment.production.yml
@@ -131,20 +131,16 @@ services:
   #  build:
   #    context: docker/vsftp/
   #  restart: always
-  #  volumes_from:
-  #    - storage
   #  volumes:
   #    - ./:/application/
   #  env_file:
   #    - etc/environment.yml
   #    - etc/environment.production.yml
 
-  #######################################
-  # Storage
-  #######################################
-  storage:
-    build:
-      context: docker/storage/
-    restart: always
-    volumes:
-      - /storage
+volumes:
+  mysql:
+  postgres:
+  solr:
+  elasticsearch:
+  redis:
+  phpmyadmin:
