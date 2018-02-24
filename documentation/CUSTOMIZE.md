@@ -18,3 +18,5 @@ docker-compose stop
 docker-compose build app
 docker-compose up -d
 ```
+
+> You can even use the `make rebuild` [task](/Makefile) in the project root, which does the same job in a more better way.
