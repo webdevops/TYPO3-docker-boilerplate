@@ -27,7 +27,7 @@ There are situations, where you don't want to build your own PHP docker-images i
 it to any registry. For example when you're using it for local development only.
 
 It is possible to make changes in your project specific app container. By adding your appropriate RUN statement(s) in the
-[Dockerfile.development](/Dockerfile.development) file and a rebuild this could be done without problems.
+[Dockerfile.development](/Dockerfile.development) file and a rebuild could be done without problems.
 
 **Note:** Not every available PHP extension could be easily installed. It's often easier to perform the steps for installing a PHP
 extension manually in a test environment first and then to bring these in the necessary format for running them in a
