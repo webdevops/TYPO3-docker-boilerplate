@@ -188,6 +188,9 @@ services:
   #    - mysql
   #  environment:
   #    - PMA_HOSTS=mysql
+  #    #- PMA_USER=root
+  #    - PMA_USER=dev
+  #    - PMA_PASSWORD=dev
   #    - VIRTUAL_HOST=pma.boilerplate.docker
   #    - VIRTUAL_PORT=80
   #  volumes:
