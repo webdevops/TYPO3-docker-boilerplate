@@ -82,6 +82,8 @@ services:
   #  image: webdevops/typo3-solr:5.0
   #  image: webdevops/typo3-solr:4.0
   #  image: webdevops/typo3-solr:3.1
+  #  ports:
+  #    - 18983:8983
   #  volumes:
   #    - solr:/opt/solr/server/solr/data
   #  env_file:
