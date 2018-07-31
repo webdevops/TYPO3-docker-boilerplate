@@ -3,11 +3,17 @@
 #++++++++++++++++++++++++++++++++++++++
 #
 # PHP-Versions:
+# PHP-Versions:
+#  5.6          -> PHP 5.6         official PHP image
+#  7.0          -> PHP 7.0         official PHP image
+#  7.1          -> PHP 7.1         official PHP image
+#  7.2          -> PHP 7.2         official PHP image
 #  ubuntu-12.04 -> PHP 5.3         (precise)  LTS
 #  ubuntu-14.04 -> PHP 5.5         (trusty)   LTS
 #  ubuntu-15.04 -> PHP 5.6         (vivid)
 #  ubuntu-15.10 -> PHP 5.6         (wily)
 #  ubuntu-16.04 -> PHP 7.0         (xenial)   LTS
+#  ubuntu-18.04 -> PHP 7.2         (bionic)   LTS
 #  centos-7     -> PHP 5.4
 #  debian-7     -> PHP 5.4         (wheezy)
 #  debian-8     -> PHP 5.6 and 7.x (jessie)
@@ -17,11 +23,13 @@
 #   webdevops/php-apache-dev:5.6
 #   webdevops/php-apache-dev:7.0
 #   webdevops/php-apache-dev:7.1
+#   webdevops/php-apache-dev:7.2
 #   webdevops/php-apache-dev:ubuntu-12.04
 #   webdevops/php-apache-dev:ubuntu-14.04
 #   webdevops/php-apache-dev:ubuntu-15.04
 #   webdevops/php-apache-dev:ubuntu-15.10
 #   webdevops/php-apache-dev:ubuntu-16.04
+#   webdevops/php-apache-dev:ubuntu-18.04
 #   webdevops/php-apache-dev:centos-7
 #   webdevops/php-apache-dev:debian-7
 #   webdevops/php-apache-dev:debian-8
@@ -32,11 +40,13 @@
 #   webdevops/php-nginx-dev:5.6
 #   webdevops/php-nginx-dev:7.0
 #   webdevops/php-nginx-dev:7.1
+#   webdevops/php-nginx-dev:7.2
 #   webdevops/php-nginx-dev:ubuntu-12.04
 #   webdevops/php-nginx-dev:ubuntu-14.04
 #   webdevops/php-nginx-dev:ubuntu-15.04
 #   webdevops/php-nginx-dev:ubuntu-15.10
 #   webdevops/php-nginx-dev:ubuntu-16.04
+#   webdevops/php-nginx-dev:ubuntu-18.04
 #   webdevops/php-nginx-dev:centos-7
 #   webdevops/php-nginx-dev:debian-7
 #   webdevops/php-nginx-dev:debian-8
@@ -49,7 +59,7 @@
 #
 #++++++++++++++++++++++++++++++++++++++
 
-FROM webdevops/php-apache-dev:ubuntu-16.04
+FROM webdevops/php-apache-dev:ubuntu-18.04
 
 ENV PROVISION_CONTEXT "development"
 
