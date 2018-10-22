@@ -24,8 +24,8 @@ services:
     volumes:
       - ./app/:/app/
     env_file:
-      - etc/environment.yml
-      - etc/environment.production.yml
+      - etc/base.env
+      - etc/production.env
 
   #######################################
   # MySQL server
@@ -45,8 +45,8 @@ services:
     volumes:
       - mysql:/var/lib/mysql
     env_file:
-      - etc/environment.yml
-      - etc/environment.production.yml
+      - etc/base.env
+      - etc/production.env
 
   #######################################
   # PostgreSQL server
@@ -62,8 +62,8 @@ services:
   #  volumes:
   #    - solr:/opt/solr/server/solr/data
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.production.yml
+  #    - etc/base.env
+  #    - etc/production.env
 
   #######################################
   # Solr server
@@ -81,8 +81,8 @@ services:
   #  environment:
   #    - SOLR_STORAGE=/opt/solr/server/solr/data
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.production.yml
+  #    - etc/base.env
+  #    - etc/production.env
 
   #######################################
   # Elasticsearch
@@ -97,8 +97,8 @@ services:
   #  volumes:
   #    - elasticsearch:/usr/share/elasticsearch/data
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.production.yml
+  #    - etc/base.env
+  #    - etc/production.env
 
   #######################################
   # Redis
@@ -110,8 +110,8 @@ services:
   #  volumes:
   #    - redis:/data
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.production.yml
+  #    - etc/base.env
+  #    - etc/production.env
 
   #######################################
   # Memcached
@@ -121,8 +121,8 @@ services:
   #    context: docker/memcached/
   #  restart: always
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.production.yml
+  #    - etc/base.env
+  #    - etc/production.env
 
   #######################################
   # FTP (vsftpd)
@@ -134,8 +134,8 @@ services:
   #  volumes:
   #    - ./:/application/
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.production.yml
+  #    - etc/base.env
+  #    - etc/production.env
 
 volumes:
   mysql:

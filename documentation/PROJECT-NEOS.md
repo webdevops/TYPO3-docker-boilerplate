@@ -18,7 +18,7 @@ composer create-project neos/neos-base-distribution app/
 touch app/.gitkeep
 ```
 
-And change `WEB_DOCUMENT_ROOT` in `/etc/environment.yml`:
+And change `WEB_DOCUMENT_ROOT` in `/etc/base.env`:
 
     WEB_DOCUMENT_ROOT=/app/Web/
     

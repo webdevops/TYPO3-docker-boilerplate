@@ -32,7 +32,7 @@ case "$1" in
     ###################################
     "neos")
         execInDir "$CODE_DIR" "docker run --rm --env COMPOSER_CACHE_DIR=/tmp --user $(id -u):$(id -g) -v \$(pwd):/app composer:latest create-project neos/neos-base-distribution /app"
-        echo "\nNOTE: You probably want to change the WEB_DOCUMENT_ROOT env in your etc/environment.yml to '/app/Web/' and run 'docker-composer up -d app' to populate the change."
+        echo "\nNOTE: You probably want to change the WEB_DOCUMENT_ROOT env in your etc/base.env to '/app/Web/' and run 'docker-composer up -d app' to populate the change."
         ;;
 
     ###################################

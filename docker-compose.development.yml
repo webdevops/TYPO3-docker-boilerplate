@@ -28,8 +28,8 @@ services:
       - SYS_PTRACE
     privileged: true
     env_file:
-      - etc/environment.yml
-      - etc/environment.development.yml
+      - etc/base.env
+      - etc/development.env
     environment:
       - VIRTUAL_HOST=.app.boilerplate.docker
       - VIRTUAL_PORT=80
@@ -55,8 +55,8 @@ services:
     volumes:
       - mysql:/var/lib/mysql
     env_file:
-      - etc/environment.yml
-      - etc/environment.development.yml
+      - etc/base.env
+      - etc/development.env
 
   #######################################
   # PostgreSQL server
@@ -71,8 +71,8 @@ services:
   #  volumes:
   #    - postgres:/var/lib/postgresql/data
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.development.yml
+  #    - etc/base.env
+  #    - etc/development.env
 
   #######################################
   # Solr server
@@ -85,8 +85,8 @@ services:
   #  volumes:
   #    - solr:/opt/solr/server/solr/data
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.development.yml
+  #    - etc/base.env
+  #    - etc/development.env
   #  environment:
   #    - VIRTUAL_HOST=solr.boilerplate.docker
   #    - VIRTUAL_PORT=8983
@@ -112,8 +112,8 @@ services:
   #  volumes:
   #    - elasticsearch:/usr/share/elasticsearch/data
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.development.yml
+  #    - etc/base.env
+  #    - etc/development.env
   #  environment:
   #    - VIRTUAL_HOST=elasticsearch.boilerplate.docker
   #    - VIRTUAL_PORT=9200
@@ -127,8 +127,8 @@ services:
   #  volumes:
   #    - redis:/data
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.development.yml
+  #    - etc/base.env
+  #    - etc/development.env
 
   #######################################
   # Memcached
@@ -137,8 +137,8 @@ services:
   #  build:
   #    context: docker/memcached/
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.development.yml
+  #    - etc/base.env
+  #    - etc/development.env
 
   #######################################
   # Mail
@@ -176,8 +176,8 @@ services:
   #  volumes:
   #    - ./:/application/
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.development.yml
+  #    - etc/base.env
+  #    - etc/development.env
 
   #######################################
   # phpMyAdmin

@@ -32,8 +32,8 @@ services:
     volumes_from:
       - storage
     env_file:
-      - etc/environment.yml
-      - etc/environment.production.yml
+      - etc/base.env
+      - etc/production.env
 
   #######################################
   # MySQL server
@@ -53,8 +53,8 @@ services:
     volumes_from:
       - storage
     env_file:
-      - etc/environment.yml
-      - etc/environment.production.yml
+      - etc/base.env
+      - etc/production.env
 
   #######################################
   # PostgreSQL server
@@ -68,8 +68,8 @@ services:
   #  volumes_from:
   #    - storage
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.production.yml
+  #    - etc/base.env
+  #    - etc/production.env
 
   #######################################
   # Solr server
@@ -86,8 +86,8 @@ services:
   #  environment:
   #    - SOLR_STORAGE=/storage/solr/server-master/
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.production.yml
+  #    - etc/base.env
+  #    - etc/production.env
 
   #######################################
   # Elasticsearch
@@ -99,8 +99,8 @@ services:
   #  volumes_from:
   #    - storage
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.production.yml
+  #    - etc/base.env
+  #    - etc/production.env
 
   #######################################
   # Redis
@@ -112,8 +112,8 @@ services:
   #  volumes_from:
   #    - storage
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.production.yml
+  #    - etc/base.env
+  #    - etc/production.env
 
   #######################################
   # Memcached
@@ -125,8 +125,8 @@ services:
   #  volumes_from:
   #    - storage
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.production.yml
+  #    - etc/base.env
+  #    - etc/production.env
 
   #######################################
   # FTP (vsftpd)
@@ -139,8 +139,8 @@ services:
   #    - sourcecode
   #    - storage
   #  env_file:
-  #    - etc/environment.yml
-  #    - etc/environment.production.yml
+  #    - etc/base.env
+  #    - etc/production.env
 
   #######################################
   # Storage
