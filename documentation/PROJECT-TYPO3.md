@@ -15,12 +15,12 @@ or (make sure [composer](https://getcomposer.org/) is installed)
 ```bash
 rm -f app/.gitkeep
 composer create-project typo3/cms-base-distribution app/
-touch app/web/FIRST_INSTALL app/.gitkeep
+touch app/public/FIRST_INSTALL app/.gitkeep
 ```
 
 Open <http://localhost:8000> and follow installation wizard.
 
-When asked for database setup, use the settings from the [services documentation](https://github.com/webdevops/TYPO3-docker-boilerplate/blob/master/documentation/SERVICES.md#mysql) or see your `etc/environment.yml`. Make sure to set the correct database-host ('mysql' by default). 
+When asked for database setup, use the settings from the [services documentation](https://github.com/webdevops/TYPO3-docker-boilerplate/blob/master/documentation/SERVICES.md#mysql) or see your `etc/environment.yml`. Make sure to set the correct database-host ('mysql' by default).
 
 
 Feel free to modify your TYPO3 installation in your `app/` (a shared folder of Docker),

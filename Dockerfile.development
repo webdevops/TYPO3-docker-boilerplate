@@ -49,7 +49,7 @@
 #
 #++++++++++++++++++++++++++++++++++++++
 
-FROM webdevops/php-apache-dev:ubuntu-16.04
+FROM webdevops/php-apache-dev:7.3
 
 ENV PROVISION_CONTEXT "development"
 
